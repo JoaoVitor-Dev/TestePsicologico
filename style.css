@@ -1,0 +1,54 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+h1{
+    max-width: 720px;
+    text-align: center;
+    margin: 60px auto;
+}
+
+h1::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: piscar .7s infinite;
+}
+
+@keyframes piscar{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.container{
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container button{
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    background-color: rgb(141, 143, 141);
+    border: none;
+    border-radius: 3px;
+    border-bottom: 4px solid rgb(77, 77, 77);
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.container button:hover{
+    background-color: rgb(141, 143, 141);
+}
+    
+.none{
+    display: none;
+}
