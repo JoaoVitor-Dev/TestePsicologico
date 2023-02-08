@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=p, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Formulário</h1>
+    <header>
+        <div>
+            <h1>Formulário</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="form" action="">
+                <label for="floresta">Como você imaginou a floresta?</label>
+                <select name="floresta" id="floresta" required>
+                    <option value="true">Clara</option>
+                    <option value="false">Escura</option>
+                </select>
+                <br>
+                <label for="cachorro">Como você imaginou o carrocho?</label>
+                <select name="cachorro" id="cachorro" required>
+                    <option value="true">Manso</option>
+                    <option value="false">Raivoso</option>
+                </select>
+                <br>
+                <label for="jarro">Do que era feito o jarro que imaginou?</label>
+                <select name="jarro" id="jarro" required>
+                    <option value="true">Barro</option>
+                    <option value="false">Porcelana</option>
+                </select>
+                <br>
+                <label for="lago">Como era o lago que você imaginou?</label>
+                <select name="lago" id="lago" required>
+                    <option value="true">Claro</option>
+                    <option value="false">Escuro</option>
+                </select>
+                <br>
+                <label for="muro">Você atravessava o muro que imaginou?</label>
+                <select name="muro" id="muro" required>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+                <br><br>
+            </form>
+        </div>
+        <button id="enviar">Enviar</button>
+
+        <div class="">
+
+        </div>
+        <div id="resultado">
+            
+        </div>
+    </main>
+    <script src="/formulario.js"></script>
 </body>
 </html>
