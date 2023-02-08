@@ -1,22 +1,22 @@
-const floresta = document.getElementById('floresta').value
-const cachorro = document.getElementById('cachorro').value
-const jarro = document.getElementById('jarro').value
-const lago = document.getElementById('lago').value
-const muro = document.getElementById('muro').value
+const floresta = document.getElementById('floresta')
+const cachorro = document.getElementById('cachorro')
+const jarro = document.getElementById('jarro')
+const lago = document.getElementById('lago')
+const muro = document.getElementById('muro')
 const enviar = document.getElementById('enviar')
 const form = document.getElementById('form')
 const exemple = document.getElementsByClassName('container')
 const resultado = document.getElementById('resultado')
 
-function verificaFloresta(valuefloresta)
+function verificaFloresta(floresta)
 {
-    if(floresta == true)
+
+    if(floresta == 1)
     {
         return 'Você é uma pessoa que enxerga a vida bem'
     }else{
         return 'Você enxerga a vida com tristeza'
     }
-  
     
 }
 
@@ -63,33 +63,28 @@ function verificaMuro(muro)
     }
 }
 
-let linha1 = verificaFloresta(floresta)
-let linha2 = verificaCachorro(cachorro)
-let linha3 = verificaJarro(jarro)
-let linha4 = verificaLago(lago)
-let linha5 = verificaMuro(muro)
 
 enviar.addEventListener('click', () => {
-
+    
 
     form.classList.add('none')
 
     enviar.classList.add('none')
 
     let primeira = document.createElement('h3')
-    resultado.appendChild(primeira).innerHTML = linha1
+    resultado.appendChild(primeira).innerHTML = verificaFloresta(floresta.value)
 
     let segundo = document.createElement('h3')
-    resultado.appendChild(segundo).innerHTML = linha2
+    resultado.appendChild(segundo).innerHTML = verificaCachorro(cachorro.value)
 
     let terceira = document.createElement('h3')
-    resultado.appendChild(terceira).innerHTML = linha3
-
+    resultado.appendChild(terceira).innerHTML = verificaJarro(jarro.value)
     let quarta = document.createElement('h3')
-    resultado.appendChild(quarta).innerHTML = linha4
+
+    resultado.appendChild(quarta).innerHTML = verificaLago(lago.value)
 
     let quinta = document.createElement('h3')
-    resultado.appendChild(quinta).innerHTML = linha5
+    resultado.appendChild(quinta).innerHTML = verificaMuro(muro.value)
 
     resultado.classList.add('box-result')
 
