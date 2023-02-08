@@ -8,10 +8,12 @@ var textos = [
             'Agora você chegou em um muro, muito alto. Imagine como é este muro.'
         ];
 
-function escrever(str, done) {
+function escrever(str, done) 
+{
     var char = str.split('').reverse();
     var typer = setInterval(function() {
-        if (!char.length) {
+        if (!char.length) 
+        {
             clearInterval(typer);
             return setTimeout(done, 500); // esperar um pouco
         }
@@ -20,22 +22,24 @@ function escrever(str, done) {
     }, 100);
 }
 
-button.addEventListener("click", () => {
+button.addEventListener("click", () => 
+{
    button.classList.add('none')
 })
 
-function rodape(conteudos, el) {
+function rodape(conteudos, el) 
+{
     var atual = -1;
 	function prox(){
 		if (atual < conteudos.length - 1) atual++;
 		else atual = 0;
 		var str = conteudos[atual];
-		escrever(str, function(){
+		escrever(str, function()
+        {
 			conteudo.innerHTML = '';
             if(atual < 4){
                 prox()
             }else{
-                alert('terminou')
                 window.location.href = "./formulario.html";
             }
 			
@@ -44,7 +48,8 @@ function rodape(conteudos, el) {
 	prox();
 }
 
-function iniciar (){
+function iniciar ()
+{
     rodape(textos)
 }
 
